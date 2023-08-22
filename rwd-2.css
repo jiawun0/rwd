@@ -116,7 +116,6 @@ img{
   padding-right: 42px;
 }
 .main2{
-  max-height: 1350px;
   padding-top: 50px;
 }
 .table{
@@ -155,7 +154,6 @@ img{
 .cart-list{
   display: flex;
   list-style: none;
-  position: relative;
   align-items: center;
   justify-content: center;
   max-width: 640px;
