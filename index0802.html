@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;900&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <!--左列+右列 下flex在裡面-->
+            <div class="d-flex justify-content-between align-item-center">
+                <div class="brand open-sans-extrabold">PROTFOLIO.</div>
+
+                <ul class="navbar-list">
+                    <!--選向下在a標籤裡-->
+                    <li><a href="#" class="list-item">about</a></li>
+                    <li><a href="#" class="list-item">skill</a></li>
+                    <li><a href="#" class="list-item">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="container p-relative"><!--容器在相對位置，下層圖片在絕對位置-->
+            <img src="photo/2.png"  
+            class="p-absolute z-index--1" style="left: 30px; top: 45px;" alt="">
+            <img src="./photo/1.png"
+            class="p-absolute z-index--1" style="left: 360px; top: 45px;"alt="">
+            <div class="row"><!--格線系統，5欄給左邊內容，5欄給右邊圖片-->
+                <div class="col-md-5 d-flex align-item-center">
+                    <div class="header-content">
+                        <h2>哈囉</h2>
+                        <h1 class="note-sans-black display-h1">我是 UI 設計師</h1>
+                        <p class="note-sans-lite">我熱愛~~~。</p>
+
+                        <div>
+                            <a href="#">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            
+                            <a href="#">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            
+                        </div>
+                        <button type="button" class="btn-primary">認識我</button>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="./photo/3.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    
+</body>
+</html>

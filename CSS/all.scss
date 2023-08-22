@@ -1,0 +1,111 @@
+/*$dark: black;
+
+body{
+    background-color: $dark;
+}*/
+
+
+@import '../bootstrap-5.3.1/scss/bootstrap-reboot.css';
+@import '../bootstrap-5.3.1/scss/bootstrap-grid.css';
+
+//先將設計師圖稿顏色轉成變數
+$dark: #000;
+$primary: #ff7a00;
+$primary-light: #ff9900;
+$secondary: #3586ff;
+$secondary-light: #0065fc;
+
+.open-sans-extrabold {//英文，在網頁左下角有格是可以複製，字重須自己寫
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;//字體重量(粗體)
+}
+.note-sans-black {//中文
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+}
+.note-sans-lite {//中文
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+//導覽列.scss
+.brand {//標題
+    font-size:24px;
+}
+.navbar {//選單左邊
+position: fixed;//疊在下層
+top: 0;
+left: 0;
+right: 0;
+background-color: rgba(white, 0.3);//底色白透明度0.3
+backdrop-filter: blur(3px);//圖片呈現毛玻璃狀
+z-index: 1000;
+
+    .navbar-list {//選單右邊
+        display: flex;
+        list-style: none;//清除選單右邊預設樣式
+        margin: 0;
+        padding: 0;
+    }
+    .list-item {
+        padding: 1rem;//16px
+        display: inline-block;//依照元素中的內容來決定內容的寬高，不會佔滿容器橫向的剩餘空間，在不超過容器的狀況下，可以與其他元素並列。
+        text-decoration: none;//不要下底線
+        color: black;
+        &:hover, &.active{
+            color: pink;
+        }
+
+    }
+}
+
+
+// button
+.btn-primary {
+    display: inline-block;//穩定結構
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    width: 50%;
+    background-image: linear-gradient(to bottom, $primary, $primary-light);//線性顏色漸層
+    color: white;
+    transition: box-shadow 0.15s;//滑鼠過去的動態感
+
+    &:hover, &.active {//滑鼠移過去，顏色比較暗
+       /* background-image: linear-gradient(to bottom, 
+        darken($primary, 5%), 
+        darken($primary-light, 5%)); */
+        /*滑鼠過去有陰影*/
+        background-image: linear-gradient(to bottom, $primary, $primary-light);
+        box-shadow: $primary-light 5px 5px 15px;
+}
+}
+
+// utilities.scss //常用的排版語法
+.d-flex {
+    display: flex;
+}
+.justify-content-between {
+    justify-content: space-between;//左右分開
+}
+.align-item-center {
+    align-items: center;//在軸線置中
+}
+.p-relative {
+    position: relative;
+}
+.p-absolute {
+    position: absolute;
+}
+.z-index--1 {//圖片挪到負階層
+    z-index: -1;
+}
+.display-h1 {
+    font-size: 68px;
+    line-height: 1.2;
+}
